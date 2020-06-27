@@ -43,7 +43,7 @@ Download the dataset [Semantic3D](http://www.semantic3d.net):
 Download in the dataset/semantic_raw 
 
 open the terminal
-cd 3D_Semantic_segmentation/dataset/semantic_raw
+cd 3D Semantic segmentation/dataset/semantic_raw
 
 ├── bildstein_station1_xyz_intensity_rgb.labels 
 
@@ -58,7 +58,7 @@ cd 3D_Semantic_segmentation/dataset/semantic_raw
 Run
 python preprocess.py
 .pcd files will be generated in
-3D_Semantic_segmentation/dataset/semantic_raw
+3D Semantic segmentation/dataset/semantic_raw
 ├── bildstein_station1_xyz_intensity_rgb.labels
 ├── bildstein_station1_xyz_intensity_rgb.pcd (new)
 ├── bildstein_station1_xyz_intensity_rgb.txt
@@ -74,7 +74,7 @@ python downsample.py
 The downsampled dataset will be written to `dataset/semantic_downsampled`. Points with
 label '0' are excluded during downsampling.
 
-cd 3D_Semantic_segmentation/dataset/semantic_downsampled
+cd 3D Semantic segmentation/dataset/semantic_downsampled
 
 ├── bildstein_station1_xyz_intensity_rgb.labels
 
@@ -100,7 +100,7 @@ Run the following commands in terminal
 
 After that the following .so files shall be in the build directory.
 
-3D_Semantic_segmentation/tf_ops/build
+3D Semantic segmentation/tf_ops/build
 
 ├── libtf_grouping.so
 
@@ -111,7 +111,7 @@ After that the following .so files shall be in the build directory.
 Now check if the kernals are working properly 
 Run the following on terminal
 
-1. cd 3D_Semantic_segmentation/tf_ops
+1. cd 3D Semantic segmentation/tf_ops
 2. python test_tf_ops.py
 
 ### 5. Train
@@ -136,7 +136,7 @@ Run
                   --set=validation \
                   --num_samples=500
 
-The prediction results will be written to 3D_Semantic_segmentation/result/sparse.
+The prediction results will be written to 3D Semantic segmentation/result/sparse.
 
 ### 7. Interpolate the sparse data
 
