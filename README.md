@@ -38,9 +38,7 @@ In this project, Open3D was used for
 
 ### 1. Download the dataset
 
-Download the dataset [Semantic3D](http://www.semantic3d.net): 
-
-Download in the dataset/semantic_raw 
+Download the dataset in a new folder named semantic_raw in dataset folder.[Semantic3D](http://www.semantic3d.net): 
 
 open the terminal
 cd 3D Semantic segmentation/dataset/semantic_raw
