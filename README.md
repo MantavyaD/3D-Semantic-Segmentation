@@ -5,6 +5,7 @@
 Semantic segmentation is the task of classifying each and every pixel in an image into a class.
 
 semantic-8 is a benchmark for classification of 3D aerial data with 8 class labels, namely
+
 1: man-made terrain
 
 2: natural terrain
