@@ -28,7 +28,7 @@ Each data file consists of seven different components consisting of x,y,z coordi
 intensity and R, G, B image value.
 
 In this project, Open3D was used for
-- Point cloud data loading, writing, and visualization. Open3D provides efficient
+- Point cloud data loading and writing. Open3D provides efficient
   implementations of various point cloud manipulation methods.
 - Data pre-processing, in particular, voxel-based down-sampling.
 - Point cloud interpolation, in particular, fast nearest neighbor search for label
@@ -60,10 +60,15 @@ python preprocess.py
 .pcd files will be generated in
 3D Semantic segmentation/dataset/semantic_raw
 ├── bildstein_station1_xyz_intensity_rgb.labels
+
 ├── bildstein_station1_xyz_intensity_rgb.pcd (new)
+
 ├── bildstein_station1_xyz_intensity_rgb.txt
+
 ├── bildstein_station3_xyz_intensity_rgb.labels
+
 ├── bildstein_station3_xyz_intensity_rgb.pcd (new)
+
 ├── bildstein_station3_xyz_intensity_rgb.txt
 
 ### 3. Downsample the data
