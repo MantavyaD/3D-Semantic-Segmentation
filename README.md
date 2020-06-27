@@ -6,13 +6,21 @@ Semantic segmentation is the task of classifying each and every pixel in an imag
 
 semantic-8 is a benchmark for classification of 3D aerial data with 8 class labels, namely
 1: man-made terrain
+
 2: natural terrain
+
 3: high vegetation
+
 4: low vegetation
+
 5: buildings
+
 6: hardscape
+
 7: scanning artifacts
+
 8: cars
+
 An additional label {0: unlabeled points} marks points without ground truth and should
 not be used for training. In total over a billion points are provided.
 Each data file consists of seven different components consisting of x,y,z coordinates,
@@ -31,13 +39,17 @@ In this project, Open3D was used for
 
 Download the dataset [Semantic3D](http://www.semantic3d.net): 
 
-###1. Download in the dataset/semantic_raw 
+Download in the dataset/semantic_raw 
 
 open the terminal
 cd 3D_Semantic_segmentation/dataset/semantic_raw
-├── bildstein_station1_xyz_intensity_rgb.labels
+
+├── bildstein_station1_xyz_intensity_rgb.labels 
+
 ├── bildstein_station1_xyz_intensity_rgb.txt
+
 ├── bildstein_station3_xyz_intensity_rgb.labels
+
 ├── bildstein_station3_xyz_intensity_rgb.txt
 
 ### 2. Convert the files to .pcd format using Open3D
@@ -62,9 +74,13 @@ The downsampled dataset will be written to `dataset/semantic_downsampled`. Point
 label '0' are excluded during downsampling.
 
 cd 3D_Semantic_segmentation/dataset/semantic_downsampled
+
 ├── bildstein_station1_xyz_intensity_rgb.labels
+
 ├── bildstein_station1_xyz_intensity_rgb.pcd
+
 ├── bildstein_station3_xyz_intensity_rgb.labels
+
 ├── bildstein_station3_xyz_intensity_rgb.pcd
 
 ### 4. Build custom tensorflow Operations
@@ -84,8 +100,11 @@ Run the following commands in terminal
 After that the following .so files shall be in the build directory.
 
 3D_Semantic_segmentation/tf_ops/build
+
 ├── libtf_grouping.so
+
 ├── libtf_interpolate.so
+
 ├── libtf_sampling.so
 
 Now check if the kernals are working properly 
@@ -97,7 +116,6 @@ Run the following on terminal
 ### 5. Train
 
 Run
-
 python train.py
 
 
@@ -124,7 +142,6 @@ The prediction results will be written to 3D_Semantic_segmentation/result/sparse
 To interpolate the sparse prediction to the full point cloud.
 
 Run
-
 python interpolate.py
 
 The prediction results will be written to result/dense.
@@ -133,8 +150,8 @@ The prediction results will be written to result/dense.
 
 For visualisation use the raw .txt file and the interpolated lables file.
 For example the file used is "untermaederbrunnen_station3_xyz_intensity_rgb"
-Run
 
+Run
 python visualise.py
 
 
